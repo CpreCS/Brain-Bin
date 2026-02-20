@@ -1,4 +1,10 @@
-export default function MenuLogo({ width="100", height="100", ...props}){
+
+interface MenuLogoProps extends React.SVGProps<SVGSVGElement> {
+  width?: number | string;
+  height?: number | string;
+}
+
+export default function MenuLogo({ width = "100", height = "100", ...props }: MenuLogoProps) {
 
   return(
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 244 192" fill="none" {...props}>

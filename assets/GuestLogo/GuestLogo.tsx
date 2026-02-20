@@ -1,4 +1,10 @@
-export default function GuestLogo({ width = 20, height = 20, ...props}){
+
+interface GuestLogoProps extends React.SVGProps<SVGSVGElement> {
+  width?: number | string;
+  height?: number | string;
+}
+
+export default function GuestLogo({ width = 20, height = 20, ...props }: GuestLogoProps) {
 
   return(
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={width} viewBox="0 0 790 1050" fill="none" {...props}>

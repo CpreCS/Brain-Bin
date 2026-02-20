@@ -1,4 +1,10 @@
-export default function BrainBinLogo({ width="100", height="100", ...props}){
+
+interface BrainBinLogoProps extends React.SVGProps<SVGSVGElement> {
+  width?: number | string;
+  height?: number | string;
+}
+
+export default function BrainBinLogo({ width = "100", height = "100", ...props }: BrainBinLogoProps) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 788 758" fill="none" {...props}>
       <g filter="url(#filter0_d_1_25)">

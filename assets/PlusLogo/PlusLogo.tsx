@@ -1,4 +1,10 @@
-export default function PlusLogo({ width="15", height="15", ...props }){
+
+interface PlusLogoProps extends React.SVGProps<SVGSVGElement> {
+  width?: number | string;
+  height?: number | string;
+}
+
+export default function PlusLogo({ width = 15, height = 15, ...props }: PlusLogoProps) {
 
   return(
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 983 983" fill="none" {...props}>

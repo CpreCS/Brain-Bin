@@ -1,4 +1,10 @@
-export default function SearchLogo({ width="16", height="16", ...props }){
+
+interface SearchLogoProps extends React.SVGProps<SVGSVGElement> {
+  width?: number | string;
+  height?: number | string;
+}
+
+export default function SearchLogo({ width = "16", height = "16", ...props }: SearchLogoProps) {
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 800 800" fill="none" {...props}>
